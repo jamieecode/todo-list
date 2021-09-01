@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import NavBar from "./components/NavBar/NavBar";
+import AddTodo from "./components/AddTodo/AddTodo";
+import ITodoState from "./types/ITodoState";
+import TodoList from "./components/TodoList/TodoList";
+import { fetchAll } from "./redux/actions/actions";
+import styled from "styled-components";
 
-function App() {
+const Section = styled.section`
+  width: 75%;
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #4e50b7;
+  padding: 2em;
+  border-radius: 0.5em;
+`;
+
+const App = () => {
+  const dispatch = useDispatch();
+  const todosInState: ITodoState = {
+    todos: useSelector((state: ITodoState) => state.todos),
+  };
+  useEffect(() => {
+    dispatch(fetchAll());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Section>
+        <AddTodo />
+
+        <TodoList {...todosInState} />
+      </Section>
+    </>
   );
-}
+};
 
 export default App;
