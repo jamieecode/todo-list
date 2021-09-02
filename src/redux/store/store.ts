@@ -13,11 +13,7 @@ const currentState = defaultState;
 const store = createStore(
   rootReducer,
   currentState,
-  compose(
-    applyMiddleware(middleware),
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
-      (window as any).__REDUX_DEVTOOLS_EXTENSION__()
-  )
+  compose(applyMiddleware(middleware))
 );
 
 middleware.run(rootSaga);

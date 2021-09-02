@@ -81,7 +81,6 @@ const TodoItem = (todo: ITodo) => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm<ITodo>();
   const todoSelector = useSelector((state: ITodoState) => state.todo);
-  const { data } = { data: todoSelector };
   const onSubmit: SubmitHandler<ITodo> = (data) => {
     data.id = todoSelector?.id as ITodo["id"];
     data.createdAt = todoSelector?.createdAt as ITodo["createdAt"];
