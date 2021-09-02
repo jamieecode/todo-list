@@ -1,6 +1,7 @@
 ## 📝 Paywork Assignment
 ### TODOList 구현
 ### with TypeScript + React + Redux + Redux-Saga
+![스크린샷(132)](https://user-images.githubusercontent.com/71512593/131769724-13e9748b-3b33-4b07-925a-bf5bb68fedd3.png)
 
 ### 설치 및 실행
 1. `npm install` -> `npm start` 또는
