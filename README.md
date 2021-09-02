@@ -1,9 +1,11 @@
 ## 📝 Paywork Assignment
-## TODOList 구현
+### TODOList 구현
 ### with TypeScript + React + Redux + Redux-Saga
 
-### 실행
-`yarn start` `npm start`
+### 설치 및 실행
+1. `npm install` -> `npm start` 또는
+2. `yarn` `yarn install` -> `yarn start`
+
 
 ### 배포링크
 
