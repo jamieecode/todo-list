@@ -1,5 +1,5 @@
 ## 📝 Paywork Assignment
-## 서버 주소를 이용한 TODOList 구현
+## TODOList 구현
 ### with TypeScript + React + Redux + Redux-Saga
 
 ### 실행
